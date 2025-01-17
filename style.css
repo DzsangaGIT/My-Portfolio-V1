@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+nav .logo h1 {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+nav .nav-links li {
+  list-style: none;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  background-color: #333;
+}
+
+nav .burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+nav .burger div {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+header {
+  background: linear-gradient(to bottom, #00aaff, #0077cc);
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  font-size: 1.8rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animated-header {
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+#about {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+#portfolio {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+}
+
+.portfolio-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.portfolio-card {
+  position: relative;
+  width: calc(33.33% - 20px);
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.portfolio-card a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.1);
+}
+
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .portfolio-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-card {
+    width: 100%;
+  }
+}
+
+
+#services {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.service-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.service-card h3 {
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+}
+
+#contact {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0077cc;
+}
+
+.social-links a {
+  color: #00aaff;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  nav .burger {
+    display: flex;
+  }
+
+  .portfolio-card {
+    width: 100%;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+}
