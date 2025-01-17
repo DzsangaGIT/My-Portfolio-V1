@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dzsanga Webfejlesztő Portfolio - Modern Web Development & Design Solutions">
+  <meta name="description" content="Dzsanga Webfejlesztő Portfolio - Modern web development, design, and digital solutions, showcasing my web development projects, services, and contact information.">
   <meta name="keywords" content="web development, design, portfolio, HTML, CSS, JavaScript, web developer">
   <meta name="author" content="Dzsanga">
   <title>Portfólió</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="assets/logo.png">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js" async></script>
 </head>
 
 <body>
@@ -19,104 +18,108 @@
       <h1>Dzsanga</h1>
     </div>
     <ul class="nav-links">
-      <li><a href="#home">Főoldal</a></li>
-      <li><a href="#about">Rólam</a></li>
-      <li><a href="#portfolio">Portfólió</a></li>
-      <li><a href="#services">Szolgáltatások</a></li>
-      <li><a href="#contact">Kapcsolat</a></li>
+      <li><a href="#home" aria-label="Főoldal">Főoldal</a></li>
+      <li><a href="#about" aria-label="Rólam">Rólam</a></li>
+      <li><a href="#portfolio" aria-label="Portfólió">Portfólió</a></li>
+      <li><a href="#services" aria-label="Szolgáltatások">Szolgáltatások</a></li>
+      <li><a href="#contact" aria-label="Kapcsolat">Kapcsolat</a></li>
     </ul>
-    <div class="burger">
+    <div class="burger" aria-label="Toggle navigation" tabindex="0">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
     </div>
   </nav>
 
-  <header id="home">
+  <header id="home" role="banner">
     <div class="container">
       <h1 class="animated-header">Helló, Dzsanga vagyok, Webfejlesztő</h1>
       <p class="intro-text">Üdvözöllek! Weboldalak fejlesztésével, designnal foglalkozom, és segítek a digitális világban való boldogulásban.</p>
     </div>
   </header>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>Rólam</h2>
-      <img src="assets/oiia-oiiaoiia.gif" alt="Profilkép" class="profile-img" loading="lazy">
-      <p>Webfejlesztő és designer vagyok, több éves tapasztalattal. Különböző projekteken dolgoztam, amelyek segítettek formálni a digitális világot. A célom, hogy modern, felhasználóbarát megoldásokat alkossak.</p>
-    </div>
-  </section>
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Rólam</h2>
+        <img src="assets/oiia-oiiaoiia.gif" alt="Dzsanga’s profile picture, a web developer with extensive experience" class="profile-img" loading="lazy">
+        <p>Webfejlesztő és designer vagyok, több éves tapasztalattal. Különböző projekteken dolgoztam, amelyek segítettek formálni a digitális világot. A célom, hogy modern, felhasználóbarát megoldásokat alkossak.</p>
+      </div>
+    </section>
 
-  <section id="portfolio" class="section">
-    <div class="container">
-      <h2>Portfólió</h2>
-      <div class="portfolio-cards">
-        <!-- Project 1 -->
-        <div class="portfolio-card">
-          <a href="https://github.com/DzsangaGIT/Visszasz-ml-l-nnepekig">
-            <img src="assets/karacsony.PNG" alt="Projekt 1" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Visszaszámláló ünnepekig</h3>
-              <p>HTML, CSS, JavaScript</p>
-            </div>
-          </a>
-        </div>
-        <!-- Project 2 -->
-        <div class="portfolio-card">
-          <a href="https://github.com/DzsangaGIT/Python-BSOD" loading="lazy">
-            <img src="assets/bsod.avif" alt="Projekt 2">
-            <div class="portfolio-overlay">
-              <h3>BSOD Trigger</h3>
-              <p>Python</p>
-            </div>
-          </a>
-        </div>
-        <!-- Project 3 -->
-        <div class="portfolio-card">
-          <a href="https://github.com/DzsangaGIT/Countdown-Timer" loading="lazy">
-            <img src="assets/ido.PNG" alt="Projekt 3">
-            <div class="portfolio-overlay">
-              <h3>Visszaszámláló & Időzítő & Dátum</h3>
-              <p>HTML, CSS, JavaScript</p>
-            </div>
-          </a>
+    <section id="portfolio" class="section">
+      <div class="container">
+        <h2>Portfólió</h2>
+        <div class="portfolio-cards">
+          <div class="portfolio-card">
+            <a href="https://github.com/DzsangaGIT/Visszasz-ml-l-nnepekig" aria-label="Visszaszámláló ünnepekig project">
+              <img src="assets/karacsony.PNG" alt="Visszaszámláló ünnepekig project image" loading="lazy" srcset="assets/karacsony-small.PNG 600w, assets/karacsony.PNG 1200w">
+              <div class="portfolio-overlay">
+                <h3>Visszaszámláló ünnepekig</h3>
+                <p>HTML, CSS, JavaScript</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-card">
+            <a href="https://github.com/DzsangaGIT/Python-BSOD" aria-label="BSOD Trigger project" loading="lazy">
+              <img src="assets/bsod.avif" alt="BSOD Trigger project image">
+              <div class="portfolio-overlay">
+                <h3>BSOD Trigger</h3>
+                <p>Python</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-card">
+            <a href="https://github.com/DzsangaGIT/Countdown-Timer" aria-label="Countdown Timer project" loading="lazy">
+              <img src="assets/ido.PNG" alt="Countdown Timer project image">
+              <div class="portfolio-overlay">
+                <h3>Visszaszámláló & Időzítő & Dátum</h3>
+                <p>HTML, CSS, JavaScript</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  
+    </section>
 
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Szolgáltatások</h2>
-      <div class="service-cards">
-        <div class="service-card">
-          <h3>Weboldal Fejlesztés</h3>
-          <p>Testre szabott weboldalak készítése, gyors betöltődéssel és reszponzív dizájnnal.</p>
-        </div>
-        <div class="service-card">
-          <h3>UI/UX Tervezés</h3>
-          <p>Felhasználóbarát, vizuálisan vonzó dizájnok tervezése a legújabb trendek szerint.</p>
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Szolgáltatások</h2>
+        <div class="service-cards">
+          <div class="service-card">
+            <h3>Weboldal Fejlesztés</h3>
+            <p>Testre szabott weboldalak készítése, gyors betöltődéssel és reszponzív dizájnnal.</p>
+          </div>
+          <div class="service-card">
+            <h3>UI/UX Tervezés</h3>
+            <p>Felhasználóbarát, vizuálisan vonzó dizájnok tervezése a legújabb trendek szerint.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Kapcsolat</h2>
-      <form>
-        <input type="text" placeholder="Név" required>
-        <input type="email" placeholder="E-mail" required>
-        <textarea placeholder="Üzenet" required></textarea>
-        <button type="submit">Küldés</button>
-      </form>
-      <div class="social-links">
-        <a href="https://github.com/DzsangaGIT">GitHub</a>
-        <a href="https://fortnitetracker.com/profile/all/DzsangaV">Fortnite</a>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Kapcsolat</h2>
+        <form>
+          <label for="name">Név</label>
+          <input type="text" id="name" placeholder="Név" required>
+          
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="E-mail" required>
+          
+          <label for="message">Üzenet</label>
+          <textarea id="message" placeholder="Üzenet" required></textarea>
+          
+          <button type="submit">Küldés</button>
+        </form>
+        <div class="social-links">
+          <a href="https://github.com/DzsangaGIT" aria-label="GitHub Profile">GitHub</a>
+          <a href="https://fortnitetracker.com/profile/all/DzsangaV" aria-label="Fortnite Profile">Fortnite</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
